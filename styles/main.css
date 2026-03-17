@@ -1,0 +1,66 @@
+body {
+  background: #ffffff;
+  color: #000000;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  display: flex; /* puts items on one row */
+  justify-content: space-between; /* name left, nav right */
+  align-items: center; /* vertically centered */
+}
+
+nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Modern CSS uses two (::) to distinguish pseudo‑elements from pseudo‑classes */
+nav a::after {
+  /* creates the underline effect*/
+  content: "";
+  position: absolute;
+  left: 50%; /* start in the middle */
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: hotpink;
+  transform: translateX(-50%); /* centers the underline */
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
