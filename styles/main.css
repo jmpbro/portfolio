@@ -2,14 +2,13 @@ body {
   background: #ffffff;
   color: #000000;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-header,
-footer {
+header {
   background: #000000;
   color: #ffffff;
   padding: 20px;
@@ -74,15 +73,4 @@ main {
 .three-sections section {
   /* each section takes equal width */
   flex: 1;
-}
-
-footer section {
-  /* stack sections vertically on small screens */
-  flex-direction: column;
-  align-items: center;
-}
-
-.copyright {
-  text-align: center;
-  margin-top: 20px;
 }
